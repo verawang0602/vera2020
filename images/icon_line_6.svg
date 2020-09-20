@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="105" height="100.05" viewBox="0 0 105 100.05">
+  <g id="Group_797" data-name="Group 797" transform="translate(-1283 -287.95)">
+    <rect id="Rectangle_147" data-name="Rectangle 147" width="105" height="100" transform="translate(1283 288)" fill="#fff"/>
+    <g id="Group_570" data-name="Group 570" transform="translate(1289.445 284.445)">
+      <g id="Group_568" data-name="Group 568" transform="translate(29.499 29.214)">
+        <path id="Path_1145" data-name="Path 1145" d="M76.383,121.841c0,5.444,5.176,9.4,12.309,9.4s12.3-3.952,12.3-9.4V98.649h.11l1.509-.421C111.2,95.82,117.2,86.717,117.2,76.089a26.674,26.674,0,0,0-1.215-8.01l-.228-.724.294-.7a5.067,5.067,0,0,0,.408-2,5.167,5.167,0,1,0-6.883,4.873l1.062.368.268,1.092a21.313,21.313,0,0,1,.614,5.1c0,9.409-5.944,17.059-13.252,17.059S85.016,85.5,85.016,76.093a21.259,21.259,0,0,1,.614-5.1L85.9,69.9l1.062-.368a5.167,5.167,0,1,0-6.883-4.873,5.083,5.083,0,0,0,.408,2l.294.7-.228.724a26.7,26.7,0,0,0-1.215,8.01c0,10.624,6,19.726,14.581,22.135l1.509.421h.105v23.192c0,2.882-4.088,3.926-6.834,3.926s-6.839-1.048-6.839-3.926V107.593a7.591,7.591,0,0,0-2.242-5.409l-4.645-4.645a7.782,7.782,0,1,0-3.865,3.865l4.645,4.645a2.193,2.193,0,0,1,.636,1.54v14.252ZM67.9,97.355a3.009,3.009,0,1,1,3.009-3.009A3.008,3.008,0,0,1,67.9,97.355Z" transform="translate(-60.14 -59.49)" fill="#1564a5"/>
+      </g>
+      <g id="Group_569" data-name="Group 569" transform="translate(5.555 5.555)">
+        <line id="Line_5" data-name="Line 5" x2="9.098" y2="3.869" transform="translate(32.743 12.144)" fill="none" stroke="#1564a5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4"/>
+        <line id="Line_6" data-name="Line 6" x1="3.869" y2="9.098" transform="translate(41.841 6.915)" fill="none" stroke="#1564a5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4"/>
+        <path id="Path_1146" data-name="Path 1146" d="M32.043,47.4A21.246,21.246,0,1,1,47.4,21.568" transform="translate(-5.555 -5.555)" fill="none" stroke="#1564a5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4"/>
+        <line id="Line_7" data-name="Line 7" y1="5.264" x2="13.379" transform="translate(32.48 6.578)" fill="none" stroke="#1564a5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,1325 @@
+.area_1{
+  position: relative;
+  width: 100%;
+  height: 120vh;
+  padding: 35px 35px 0;
+  min-height: 780px;
+  @media #{$nb1100}{
+    height: 65vh;
+  }
+  @media #{$pad}{
+    height: auto;
+    padding: 15px 15px 0;
+    min-height: auto;
+  }
+  .indbox{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  &.open_an{
+    .banbg{
+      .road_sty{
+        &.road_light_l{
+          @include animation(moveright 2s 3.5s ease both);
+        }
+        &.road_light_r{
+          @include animation(moveleft 2s 3.3s ease both);
+        }
+      }
+      .people{
+        @include animation(moveright_2 2s 2.8s ease both);
+      }
+      .sun{
+        @include animation(sun_up 2s 3.1s ease both);
+      }
+      .ban_ttbox{
+        .anbg{
+          @include animation(tool_line 2s 4.2s forwards,w_right_0 2s 5.2s forwards);
+        }
+        .bantt{
+          @include animation(alpha_0 2s 5.5s ease both);
+        }
+      }
+    } 
+    .road{
+      .mountain_r{
+        @include animation(moveleft 1.5s 3.6s ease both);
+      }
+      .mountain_l{
+        @include animation(moveright_2 1.5s 3.6s ease both);
+      }
+    }
+  }
+  .banbg{
+    position: relative;
+    width: 100%;
+    height: 77vh;
+    background: url("#{$img_path}bg_blue.png") center center repeat-x;
+    -webkit-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    @media #{$nb1100}{
+      height: 60%;
+    }
+    @media #{$pad} {
+      height: 500px;
+    }
+    @media #{$nb500}{
+      height: 300px;
+    }
+    .roadline{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: #dee3e4;
+      z-index: 4;
+    }
+    .ban_ttbox{
+      width: 100%;
+      padding-left: 150/1920*100%;
+      padding-top: 100/850*100%;
+      padding-right: 30px;
+      .view_tt{
+        position: relative;
+        @extend %inline-block;
+        height: 100%;
+        .anbg{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          background: #fff;
+          z-index: 7;
+        }
+      }
+    }
+    .bantt{
+      @extend %inline-block;
+      font-size: 40px;
+      color: #333333;
+      line-height: 45px;
+      letter-spacing: 2px;
+      z-index: 6;
+      @include alpha(0);
+      @media #{$pc_s} {
+        font-size: 30px;
+        line-height: 35px;
+        span{
+          font-size: 22px;
+          line-height: 22px;
+        }
+      }
+      @media #{$pad}{
+        font-size: 20px;
+        line-height: 24px;
+      }
+      @media #{$nb500}{
+        padding-top: 20px;
+      }
+      span{
+        display: block;
+        font-size: 30px;
+        color: #eca110;
+        line-height: 30px;
+        letter-spacing: 2px;
+        margin-top: 5px;
+        @media #{$pad}{
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+    }
+    .sun{
+      position: absolute;
+      width: 315/1920*100%;
+      bottom: -28.23529%;
+      right: -3.625%;
+      @media #{$pad} {
+        width: calc(600/1920*100%);
+      }
+      .pb{
+        width: 100%;
+        padding-bottom: 100%;
+        background: #ffffe9;
+        -webkit-border-radius: 50%;
+        border-radius:50%;
+      }
+    }
+    .cloud{
+      position: absolute;
+      width: 100%;
+      top: 15%;
+      left: 0;
+      line-height: 0;
+    }
+    .city{
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      line-height: 0;
+      @media #{$pad} {
+        width: 180%;
+      }
+    }
+    .road_sty{
+      position: absolute;
+      bottom: 0;
+      width: 240/1920*100%;
+      z-index: 5;
+      @media #{$nb1100} {
+        width: 5/1920*100%;
+      }
+      @media #{$pad} {
+        width: calc(450/1920*100%);
+      }
+      .imgbefore{
+        position: relative;
+        line-height: 0;
+        img{
+          &:first-child{
+            width: 95/240*100%;
+          }
+          &:last-child{
+            width: 197/240*100%;
+            position: absolute;
+            bottom: -60%;
+            left: -60%;
+          }
+        }
+      }
+      &.road_light_l{
+        left: 150/1920*100%;
+        transform: translateX(-100vw);
+      }
+      &.road_light_r{
+        right: 670/1920*100%;
+        transform: translateX(350vw);
+        @media #{$nb1100} {
+          right: 600/1920*100%;
+        }
+        @media #{$pad} {
+          right: 260/1920*100%;
+        }
+        .imgbefore{
+          text-align: right;
+          img{
+            &:last-child{
+              right: 17%;
+              left: auto;
+            }
+          }
+        }
+      }
+    }
+    .people{
+      transform: translateX(-300vw);
+      width: 340/1920*100%;
+      position: absolute;
+      bottom: -6%;
+      left: 390/1920*100%;
+      z-index: 5;
+      @media #{$nb1100} {
+        width: 400/1920*100%;
+      }
+      @media #{$pad} {
+        width: calc(800/1920*100%);
+      }
+      .imgbefore{
+        position: relative;
+        line-height: 0;
+        img{
+          &:first-child{
+            width: 280/340*100%;
+          }
+          &:last-child{
+            width: 333/340*100%;
+            position: absolute;
+            bottom: -65%;
+            right: 20%;
+          }
+        }
+      }
+    }
+  }
+  .road{
+    position: relative;
+    width: 100%;
+    height: 43vh;
+    background: #f5f1ec;
+    @media #{$nb1100}{
+      height: 40%;
+    }
+    @media #{$pad}{
+      height: 400px;
+    }
+    @media #{$nb500}{
+      height: 200px;
+    }
+    .mountain_r{
+      transform: translateX(300vw);
+      width: 1190/1920*100%;
+      position: absolute;
+      bottom: -10%;
+      right: -180px;
+      line-height: 0;
+      z-index: 6;
+      @media #{$pc_s} {
+        right: 0;
+      }
+      @media #{$pad} {
+        width: calc(1750/1920*100%);
+      }
+    }
+    .mountain_l{
+      transform: translateX(-300vw);
+      width: 50%;
+      position: absolute;
+      bottom: -50%;
+      left: -14%;
+      line-height: 0;
+      z-index: 6;
+      @media #{$pc_s} {
+        bottom: -20%;
+      }
+      @media #{$pad} {
+        width: calc(1500/1920*100%);
+      }
+    }
+  }
+}
+.house_pad{
+  position: absolute;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  z-index: 7;
+  .pb{
+    position: relative;
+    padding-bottom: 428/1927*100%;
+    background: url("#{$img_path}house_w.png") center center repeat-x;
+    -webkit-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    .house_smoke{
+      position: absolute;
+      top: 18%;
+      right: 26%;
+      @media #{$pc_s} {
+        top: 22%;
+        right: 27%;
+      }
+      @media #{$pad} {
+        top: 24%;
+        right: 28%;
+      }
+      @media #{$mobile} {
+        top: 8%;
+        right: 24%;
+      }
+      .smoke{
+        filter: blur(3px);
+        z-index: 3;
+        width: 1px;
+        top: 40%;
+        left: 40%;
+        span { 
+          display: block;
+          position: absolute;
+          bottom: -35px; left: 50%; 
+          margin-left:-20px;
+          height: 0px; width: 0px;
+          border: 70px solid #fff;
+          -webkit-border-radius: 70px;
+          border-radius:70px;
+          left: -14px; opacity: 0;
+          transform: scale(0.2);
+          @media #{$mobile} {
+            border: 35px solid #fff;
+            -webkit-border-radius: 35px;
+            border-radius:35px;
+          }
+          &.s0 { 
+            @include animation(smoke_l 3s 0s infinite);
+          }
+          &.s1 { 
+            @include animation(smoke_r 3s .5s infinite);
+          }
+          &.s2 { 
+            @include animation(smoke_l 3s 1s infinite);
+          }
+          &.s3 { 
+            @include animation(smoke_r 3s 1.5s infinite);
+          }
+          &.s4 { 
+            @include animation(smoke_l 3s 2s infinite);
+          }
+          &.s5 { 
+            @include animation(smoke_r 3s 2.5s infinite);
+          }
+          &.s6 { 
+            @include animation(smoke_l 3s 3s infinite);
+          }
+          &.s7 { 
+            @include animation(smoke_r 3s 3.5s infinite);
+          }
+          &.s8 { 
+            @include animation(smoke_l 3s 4s infinite);
+          }
+          &.s9 { 
+            @include animation(smoke_r 3s 4.5s infinite);
+          }
+        }
+      }
+    }
+  }
+  .scrolbtn{
+    cursor: auto;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    background: none;
+    .boneicon{
+      @include bg("scrolldown.png");
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      @include animation(movedown_noa 2s ease infinite);
+      @media #{$pad} {
+        @include bg_m("scrolldown.png");
+        margin-bottom: 0;
+      }
+    }
+    span{
+      &:last-child{
+        font-size: 20px;
+        font-weight: bold;
+        color: $col_brown;
+        line-height: 24px;
+        letter-spacing: 1px;
+        @media #{$pad} {
+          font-size: 15px;
+        }
+      }
+    }
+    @media #{$nb1100} {
+      top: 50%;
+      -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+    }
+  }
+}
+.title{
+  margin-bottom: 40px;
+  @media #{$pad} {
+    margin-bottom: 10px;
+  }
+  h2{
+    font-size: 42px;
+    color: $col_blue;
+    line-height: 45px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    @media #{$pad} {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+  h3{
+    font-size: 30px;
+    color: #888888;
+    line-height: 30px;
+    letter-spacing: 1px;
+    @media #{$pad} {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+}
+.area_2{
+  position: relative;
+  z-index: 8;
+  margin-top: -80px;
+  @media #{$pc_s}{
+    margin-top: 0;
+  }
+  @media #{$pad} {
+    margin-top: 20px;
+  }
+  .about_top_txt{
+    position: relative;
+    text-align: right;
+    line-height: 0;
+    @media #{$pad} {
+      text-align: center;
+    }
+    &.open_an{
+      .leftbox{
+        p{
+          @include animation(moveDown 2s 0s ease both);
+        }
+      } 
+      .imgroup{
+        .whbg{
+          @include animation(h_0 2s 0s ease both);
+        }
+      }
+    }
+    .imgroup{
+      @extend %inline-block;
+      position: relative;
+      .whbg{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: 3;
+      }
+    }
+    .leftbox{
+      text-align: left;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      padding-right: 540px;
+      -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      p{
+        font-size: 18px;
+        font-weight: 400;
+        color: #333333;
+        line-height: 36px;
+        text-align: justify;
+        @include alpha(0);
+        @media #{$pad} {
+          font-size: 15px;
+          line-height: 27px;
+          margin-bottom: 30px;
+        }
+        @media #{$mobile} {
+          margin-bottom: 10px;
+        }
+      }
+      @media #{$pad} {
+        position: relative;
+        top: 0;
+        padding-right: 0;
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+    }
+  }
+  .larn_btn{
+    @include alpha(0);
+  }
+  .skillbox{
+    &.open_an{
+      .skill_list{
+        .item{
+          &:first-child,&:nth-child(2),&:nth-child(3){
+            .skil_tt{
+              span{
+                &.onebg{
+                  @include animation(w_0 2.2s 0s ease both);
+                }
+              }
+            }
+            .footarea{
+              .foot{
+                @include animation(foot_scale .6s ease both);
+                -webkit-animation-delay: 1s;
+                animation-delay: 1s;
+                &.f_2{
+                  -webkit-animation-delay: 1.2s;
+                  animation-delay: 1.2s;
+                }
+                &.f_3{
+                  -webkit-animation-delay: 1.4s;
+                  animation-delay: 1.4s;
+                }
+                &.f_4{
+                  -webkit-animation-delay: 1.6s;
+                  animation-delay: 1.6s;
+                }
+                &.f_5{
+                  -webkit-animation-delay: 1.8s;
+                  animation-delay: 1.8s;
+                }
+              }
+              p{
+                @include animation(moveup .6s 2.2s ease both);
+              }
+            }
+          }
+          &:last-child,&:nth-child(4),&:nth-child(5){
+            .skil_tt{
+              span{
+                &.onebg{
+                  @include animation(w_0 2.2s 2.4s ease both);
+                }
+              }
+            }
+            .footarea{
+              .foot{
+                @include animation(foot_scale .6s ease both);
+                -webkit-animation-delay: 3.4s;
+                animation-delay: 3.4s;
+                &.f_2{
+                  -webkit-animation-delay: 3.6s;
+                  animation-delay: 3.6s;
+                }
+                &.f_3{
+                  -webkit-animation-delay: 3.8s;
+                  animation-delay: 3.8s;
+                }
+                &.f_4{
+                  -webkit-animation-delay: 4s;
+                  animation-delay: 4s;
+                }
+                &.f_5{
+                  -webkit-animation-delay: 4.2s;
+                  animation-delay: 4.2s;
+                }
+              }
+              p{
+                @include animation(moveup .6s 4.4s ease both);
+              }
+            }
+          }
+        } 
+      } 
+      .larn_btn{
+        @include animation(moveup .6s 4.8s ease both);
+      }
+    }
+  }
+}
+.skillbox{
+  position: relative;
+  &::before{
+    content: ""; 
+    position: absolute;
+    bottom:100px;
+    left: 110px;
+    z-index: 1;
+    @include bg("footbg.png");
+    @media #{$pc_s} {
+      display: none;
+    }
+  }
+  &::after{
+    content: ""; 
+    position: absolute;
+    bottom: -40px;
+    left: 90px;
+    z-index: 3;
+    @include bg("feed.png");
+    @media #{$pc_s} {
+      display: none;
+    }
+  }
+  .bg{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 355/1920*100%;
+    height: 100%;
+    background: $col_blue_2;
+  }
+  .main{
+    position: relative;
+    background: $col_blue_2;
+    -webkit-border-top-left-radius: 50px;
+    border-top-left-radius: 50px;
+    -webkit-border-bottom-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    z-index: 2;
+    padding-bottom: 60px;
+    @media #{$nb1100} {
+      -webkit-border-top-left-radius: 0;
+      border-top-left-radius: 0;
+      -webkit-border-bottom-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    @media #{$pad} {
+      padding-bottom: 45px;
+    }
+  }
+}
+.skill_list{
+  padding: 60px 0 0 40px;
+  @extend %inline_item;
+  margin: 0 -30px;
+  @media #{$pad} {
+    padding: 45px 0 0;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .item{
+    @extend %inline-block;
+    vertical-align: top;
+    padding: 0 30px;
+    margin-bottom: 60px;
+    text-align: center;
+    @media #{$pad} {
+      margin-bottom: 30px;
+    }
+    .skil_tt{
+      position: relative;
+      text-align: center;
+      margin-bottom: 10px;
+      span{
+        display: block;
+        &.onebg{
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background: $col_blue_2;
+          z-index: 5;
+        }
+        &.two_word{
+          background: url("#{$img_path}dog_1.png") bottom center no-repeat;
+          height: 120px;
+          -webkit-background-size: contain;
+          -o-background-size: contain;
+          background-size: contain;
+          margin-bottom: 10px;
+          @media #{$pc_s} {
+            height: 85px;
+            -webkit-background-size: image-width("#{$img_path}dog_1.png")/1.4 auto;
+            -o-background-size: image-width("#{$img_path}dog_1.png")/1.4 auto;
+            background-size: image-width("#{$img_path}dog_1.png")/1.4 auto;
+          }
+          @media #{$mobile} {
+            height: 60px;
+            -webkit-background-size: image-width("#{$img_path}dog_1.png")/2 auto;
+            -o-background-size: image-width("#{$img_path}dog_1.png")/2 auto;
+            background-size: image-width("#{$img_path}dog_1.png")/2 auto;
+          }
+          &.dog_2{
+            background: url("#{$img_path}dog_2.png") bottom center no-repeat;
+            -webkit-background-size: contain;
+            -o-background-size: contain;
+            background-size: contain;
+            @media #{$pc_s} {
+              -webkit-background-size: image-width("#{$img_path}dog_2.png")/1.4 auto;
+              -o-background-size: image-width("#{$img_path}dog_2.png")/1.4 auto;
+              background-size: image-width("#{$img_path}dog_2.png")/1.4 auto;
+            }
+            @media #{$mobile} {
+              height: 57px;
+              -webkit-background-size: image-width("#{$img_path}dog_2.png")/2 auto;
+              -o-background-size: image-width("#{$img_path}dog_2.png")/2 auto;
+              background-size: image-width("#{$img_path}dog_2.png")/2 auto;
+            }
+          }
+          &.dog_3{
+            background: url("#{$img_path}dog_3.png") bottom center no-repeat;
+            -webkit-background-size: contain;
+            -o-background-size: contain;
+            background-size: contain;
+            @media #{$pc_s} {
+              -webkit-background-size: image-width("#{$img_path}dog_3.png")/1.4 auto;
+              -o-background-size: image-width("#{$img_path}dog_3.png")/1.4 auto;
+              background-size: image-width("#{$img_path}dog_3.png")/1.4 auto;
+            }
+            @media #{$mobile} {
+              height: 60px;
+              -webkit-background-size: image-width("#{$img_path}dog_3.png")/2 auto;
+              -o-background-size: image-width("#{$img_path}dog_3.png")/2 auto;
+              background-size: image-width("#{$img_path}dog_3.png")/2 auto;
+            }
+          }
+          &.dog_4{
+            background: url("#{$img_path}dog_4.png") bottom center no-repeat;
+            -webkit-background-size: contain;
+            -o-background-size: contain;
+            background-size: contain;
+            @media #{$pc_s} {
+              -webkit-background-size: image-width("#{$img_path}dog_4.png")/1.4 auto;
+              -o-background-size: image-width("#{$img_path}dog_4.png")/1.4 auto;
+              background-size: image-width("#{$img_path}dog_4.png")/1.4 auto;
+            }
+            @media #{$mobile} {
+              height: 55px;
+              -webkit-background-size: image-width("#{$img_path}dog_4.png")/2 auto;
+              -o-background-size: image-width("#{$img_path}dog_4.png")/2 auto;
+              background-size: image-width("#{$img_path}dog_4.png")/2 auto;
+            }
+          }
+          &.dog_5{
+            background: url("#{$img_path}dog_5.png") bottom center no-repeat;
+            -webkit-background-size: contain;
+            -o-background-size: contain;
+            background-size: contain;
+            @media #{$pc_s} {
+              -webkit-background-size: image-width("#{$img_path}dog_5.png")/1.4 auto;
+              -o-background-size: image-width("#{$img_path}dog_5.png")/1.4 auto;
+              background-size: image-width("#{$img_path}dog_5.png")/1.4 auto;
+            }
+            @media #{$mobile} {
+              height: 45px;
+              -webkit-background-size: image-width("#{$img_path}dog_5.png")/2 auto;
+              -o-background-size: image-width("#{$img_path}dog_5.png")/2 auto;
+              background-size: image-width("#{$img_path}dog_5.png")/2 auto;
+            }
+          }
+          &.dog_6{
+            background: url("#{$img_path}dog_6.png") bottom center no-repeat;
+            -webkit-background-size: contain;
+            -o-background-size: contain;
+            background-size: contain;
+            @media #{$pc_s} {
+              -webkit-background-size: image-width("#{$img_path}dog_6.png")/1.4 auto;
+              -o-background-size: image-width("#{$img_path}dog_6.png")/1.4 auto;
+              background-size: image-width("#{$img_path}dog_6.png")/1.4 auto;
+            }
+            @media #{$mobile} {
+              height: 45px;
+              -webkit-background-size: image-width("#{$img_path}dog_6.png")/2 auto;
+              -o-background-size: image-width("#{$img_path}dog_6.png")/2 auto;
+              background-size: image-width("#{$img_path}dog_6.png")/2 auto;
+            }
+          }
+        }
+        &.third_word{
+          font-size: 30px;
+          letter-spacing: 3px;
+          color: #fff;
+          line-height: 36px;
+          @media #{$pc_s} {
+            font-size: 22px;
+            line-height: 27px;
+          }
+          @media #{$pad} {
+            font-size: 20px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+    .footarea{
+      @extend %inline_item;
+      .foot{
+        @extend %inline-block;
+        vertical-align: middle;
+        @include bg("skill_foot_1.png");
+        margin-right: 8px;
+        @include transform(scale(0));
+        @media #{$pc_s} {
+          @include bg_m("skill_foot_1_m.png");
+        }
+        &.foot_2{
+          @include bg("skill_foot_2.png");
+          @media #{$pc_s} {
+            @include bg_m("skill_foot_2_m.png");
+          }
+        }
+        &.foot_3{
+          @include bg("skill_foot_3.png");
+          @media #{$pc_s} {
+            @include bg_m("skill_foot_3_m.png");
+          }
+        }
+        &.foot_4{
+          @include bg("skill_foot_4.png");
+          @media #{$pc_s} {
+            @include bg_m("skill_foot_4_m.png");
+          }
+        }
+      }
+      p{
+        @extend %inline-block;
+        vertical-align: middle;
+        font-size: 24px;
+        color: #f3fc01;
+        line-height: 27px;
+        letter-spacing: 1px;
+        @include alpha(0);
+        @media only screen and (max-width: 320px) {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+.area_3{
+  overflow: hidden;
+  &.open_an{
+    .treebox{
+      .treework_l{
+        @include animation(moveright_3 1.8s .2s ease both);
+      }
+      .treework_r{
+        @include animation(moveleft_2 1.8s .2s ease both);
+      }
+    }
+    .wall{
+      .item{
+        .midbox{
+          .whbg{
+            .bgcover{
+              @include animation(h_1 1.3s 1s ease both);
+            }
+            .anbg_w{
+              @include animation(h_1 .6s 1.5s ease both,h_bottom_0 2.2s 2.1s forwards);
+            }
+            .workimg{
+              .pb{
+                @include animation(alpha_0 1.8s 2.3s ease both);
+              }
+            }
+          } 
+          .work_t{
+            @include animation(moveup_1 1s 3.5s ease both);
+          }
+        }
+        p{
+          @include animation(moveDown 1s 3.5s ease both);
+        }
+      } 
+      .larn_btn{
+        @include animation(moveDown 1s 3.8s ease both);
+      }
+    } 
+  }
+  .title{
+    text-align: center;
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 0;
+    @media #{$mobile}{
+      margin-top: 30px;
+    }
+  }
+  .wall_box{
+    width: 100%;
+    position: relative;
+    margin-top: -35px;
+    @media #{$pc_s}{
+      margin-top: 0;
+    }
+    @media #{$mobile} {
+      padding-top: 18%;
+    }
+    .treework_l{
+      @include transform(translateX(-20vw));
+      width: 238/1920*100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    .treework_r{
+      @include transform(translateX(20vw));
+      width: 368/1920*100%;
+      float: right;
+    }
+  }
+  .wall{
+    position: relative;
+    width: 100%;
+    .ind_grass{
+      position: absolute;
+      bottom:-5px;
+      left: 0;
+      z-index: 5;
+    }
+    .pb_wall{
+      padding-bottom: 600/1920*100%;
+      background: url("#{$img_path}wall.png") bottom center no-repeat;
+      @include background-size(cover);
+      @media #{$pc_m} {
+        padding-bottom: 800/1920*100%;
+      }
+      @media #{$pc_s} {
+        padding-bottom: 900/1920*100%;
+      }
+      @media #{$pad}{
+        padding-bottom: 1300/1920*100%;
+      }
+      @media #{$mobile}{
+        padding-bottom: 120%;
+      }
+      @media #{$nb500} {
+        padding-bottom: 135%;
+      }
+    }
+    .main{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+      z-index: 6;
+    }
+    .larn_btn{
+      position: relative;
+      z-index: 6;
+      margin-top: 4%;
+      @include alpha(0);
+      @include bg("learn_more_2.png");
+      @media #{$pc_s} {
+        @include bg_m("learn_more_2m.png");
+      }
+      @media #{$mobile} {
+        margin-top: 7%;
+      }
+      a{
+        color: #a75403;
+      }
+    }
+    .mar_row{
+      margin: 0 -65px;
+      @extend %inline_item;
+      @media #{$pc_s} {
+        margin: 0 -20px;
+      }
+      @media #{$pad} {
+        margin: 0 -15px;
+      }
+    }
+    .item{
+      position: relative;
+      padding: 0 40px;
+      @extend %inline-block;
+      vertical-align: top;
+      @media #{$pc_s} {
+        padding: 0 20px;
+      }
+      @media #{$pad} {
+        padding: 0 15px;
+        &:last-child{
+          display: none;
+        }
+      }
+      @media #{$mobile} {
+        &:nth-child(2){
+          display: none;
+        }
+      }
+      .workimg{
+        width: 100%;
+        position: relative;
+        .anbg_w{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 0;
+          z-index: 1;
+          background: #fff;
+          z-index: 3;
+        }
+        .pb{
+          padding-bottom: 280/304*100%;
+          background: url("#{$img_path}ind_work_1.png") center center no-repeat;
+          @include background-size(100% auto);
+          position: relative;
+          z-index: 2;
+          @include alpha(0);
+        }
+        &.workimg_2{
+          .pb{
+            background: url("#{$img_path}ind_work_2.png") center center no-repeat;
+            @include background-size(100% auto);
+          }
+        }
+        &.workimg_3{
+          .pb{
+            background: url("#{$img_path}ind_work_3.png") center center no-repeat;
+            @include background-size(100% auto);
+          }
+        }
+      }
+      .listdog{
+        position: absolute;
+        top: -35%;
+        left: 50%;
+        -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+        width: 132/310*100%;
+        z-index: 4;
+        @extend %bg_change; 
+        @media #{$pc_s} {
+          top: -32%;
+        }
+        @media #{$mobile} {
+          width: 90/310*100%;
+          top: -20%;
+        }
+        .pb{
+          padding-bottom: 113/132*100%;
+          background: url("#{$img_path}chal_m.png") center center no-repeat;
+          @include background-size(100% auto);
+          @extend %bg_change; 
+        }
+        &.jimdog{
+          width: 141/310*100%;
+          top: -29%;
+          @media #{$pc_s} {
+            top: -26%;
+          }
+          .pb{
+            padding-bottom: 97/141*100%;
+            background: url("#{$img_path}jim_1.png") center center no-repeat;
+            @include background-size(100% auto);
+            @extend %bg_change; 
+          }
+        }
+        &.shiedog{
+          width: 126/310*100%;
+          top: -32%;
+          @media #{$pc_s} {
+            top: -27%;
+          }
+          .pb{
+            padding-bottom: 108/126*100%;
+            background: url("#{$img_path}shie_1.png") center center no-repeat;
+            @include background-size(100% auto);
+            @extend %bg_change; 
+          }
+        }
+      }
+      p{
+        text-align: center;
+        font-size: 20px;
+        color: #000;
+        line-height: 24px;
+        letter-spacing: 1px;
+        @include alpha(0);
+      }
+      .midbox{
+        margin-bottom: 50px;
+        @extend %bg_change; 
+        @media #{$pad} {
+          margin-bottom: 30px;
+        }
+        .whbg{
+          line-height: 0;
+          padding: 0 10px 10px;
+          position: relative;
+          @media #{$pc_s} {
+            padding: 5px;
+          }
+          .bgcover{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            z-index: 1;
+            background: #fff;
+          }
+          img{
+            position: relative;
+            z-index: 2;
+          }
+        }
+        .work_t{
+          white-space: nowrap;
+          padding: 10px 20px;
+          background: $col_blue_2;
+          -webkit-border-radius: 40px;
+          border-radius:40px;
+          @extend %inline-block;
+          font-size: 24px;
+          font-weight: 400;
+          color: #fff;
+          text-align: center;
+          line-height: 28px;
+          letter-spacing: 1px;
+          position: absolute;
+          z-index: 3;
+          left: 50%;
+          bottom: -6%;
+          -webkit-transform: translate(-50%, 0);
+          -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+          border: solid 4px transparent;
+          @extend %bg_change; 
+          @include alpha(0);
+          @media #{$pc_s} {
+            font-size: 20px;
+            line-height: 22px;
+          }
+          @media #{$mobile} {
+            bottom: -3%;
+          }
+        }
+      }
+      @media #{$pc}{
+        &:hover{
+          .listdog{
+            .pb{
+              background: url("#{$img_path}chal_s_m.png") center center no-repeat;
+              @include background-size(100% auto);
+            }
+            &.jimdog{
+              .pb{
+                background: url("#{$img_path}jim_2.png") center center no-repeat;
+                @include background-size(100% auto);
+              }
+            }
+            &.shiedog{
+              .pb{
+                background: url("#{$img_path}shie_2.png") center center no-repeat;
+                @include background-size(100% auto);
+              }
+            }
+          }
+          .midbox{
+            box-shadow: 15px 15px 0px #c3c3c3;
+            .work_t{
+              border: solid 4px #fff;
+              box-shadow: 15px 15px 0px #c3c3c3;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.area_4{
+  background: url("#{$img_path}stone.png") center center no-repeat;
+  background-color: #f5f1ec;
+  text-align: center;
+  &.open_an{
+    .contact_info{
+      .bg_w{
+        @include animation(tool_line 1.5s 0s ease both);
+      }
+      p{
+        @include animation(moveup 1.5s .8s ease both);
+      }
+    }
+  }
+  .contact_info{
+    position: relative;
+    padding: 30px;
+    text-align: center;
+    .bg_w{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: #fff;
+      -webkit-border-radius: 50px;
+      border-radius:50px;
+    }
+    @media #{$pad} {
+      -webkit-border-radius: 25px;
+      border-radius:25px;
+    }
+    p{
+      font-size: 36px;
+      color: #000;
+      line-height: 40px;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+      word-break: break-all;
+      @include alpha(0);
+      @media #{$pc_s} {
+        font-size: 27px;
+        line-height: 30px;
+      }
+      @media #{$pad} {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 5px;
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .padbox{
+    position: relative;
+    padding: 80px 0;
+    @media #{$pad} {
+      padding: 40px 0;
+    }
+  }
+}
+.bird_container{
+  position: absolute;
+	top: 20%;
+  left: -10%;
+  z-index: 10;
+	transform: scale(0) translateX(-10vw);
+  will-change: transform;
+	@include animation(fly_right_one linear 0s infinite);
+	
+	&.one {
+		animation-duration: 15s;
+		animation-delay: 0;
+	}
+	
+	&.two {
+		animation-duration: 16s;
+		animation-delay: 1s;
+	}
+	
+	&.three {
+		animation-duration: 14.6s;
+		animation-delay: 9.5s;
+	}
+	
+	&.four {
+		animation-duration: 16s;
+		animation-delay: 10.25s;
+	}
+}
+.bird {
+  background: url("#{$img_path}bird_banner.svg");
+  @include background-size(auto 100%);
+	width: 88px;
+	height: 125px;
+  will-change: background-position;
+  @include animation(fly_cycle steps(10) infinite);
+  @media #{$mobile} {
+    width: 60px;
+    height: 85px;
+    @include animation(fly_cycle_m steps(5) infinite);
+  }
+
+	&.one {
+		animation-duration: 1s;
+		animation-delay: -0.5s;		
+	}
+	
+	&.two {
+		animation-duration: 0.9s;
+		animation-delay: -0.75s;
+	}
+	
+	&.three {
+		animation-duration: 1.25s;
+		animation-delay: -0.25s;
+	}
+	
+	&.four {
+		animation-duration: 1.1s;
+		animation-delay: -0.5s;
+	}
+
+}
