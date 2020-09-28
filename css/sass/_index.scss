@@ -408,12 +408,13 @@
         line-height: 24px;
         letter-spacing: 1px;
         @media #{$pad} {
+          display: none;
           font-size: 15px;
         }
       }
     }
     @media #{$nb1100} {
-      top: 50%;
+      top: 60%;
       -webkit-transform: translate(-50%,-50%);
       -ms-transform: translate(-50%,-50%);
       transform: translate(-50%,-50%);
