@@ -667,6 +667,9 @@
   padding: 60px 0 0 40px;
   @extend %inline_item;
   margin: 0 -30px;
+  @media #{$nb1100}{
+    padding: 60px 0 0 0;
+  }
   @media #{$pad} {
     padding: 45px 0 0;
     margin: 0;
@@ -958,7 +961,7 @@
         padding-bottom: 1300/1920*100%;
       }
       @media #{$mobile}{
-        padding-bottom: 120%;
+        padding-bottom: 122%;
       }
       @media #{$nb500} {
         padding-bottom: 135%;
@@ -985,7 +988,7 @@
         @include bg_m("learn_more_2m.png");
       }
       @media #{$mobile} {
-        margin-top: 7%;
+        margin-top: 5%;
       }
       a{
         color: #a75403;
@@ -1115,9 +1118,6 @@
       .midbox{
         margin-bottom: 50px;
         @extend %bg_change; 
-        @media #{$pad} {
-          margin-bottom: 30px;
-        }
         .whbg{
           line-height: 0;
           padding: 0 10px 10px;
