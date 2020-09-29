@@ -1022,11 +1022,17 @@
         position: absolute;
         bottom: -11%;
         right: 12%;
+        @media #{$pc_s}{
+          right: 6%;
+        }
         @media #{$nb1100}{
           display: none;
         }
         &.i_jimmy{
           bottom: -5%;
+        }
+        &.i_neo{
+          width: 17%;
         }
       }
     }
