@@ -112,10 +112,10 @@
       }
       .pro_history{
         position: relative;
-        margin-top: 180px;
+        margin-top: 120px;
         padding-right: 870px;
         z-index: 2;
-        @media #{$pc_s} {
+        @media #{$pc_m} {
           padding-right: 600px;
           margin-top: 90px;
         }
@@ -193,7 +193,7 @@
       bottom: -30px;
       right: 0;
       z-index: 2;
-      @media #{$pc_s} {
+      @media #{$pc_m} {
         width: 450px;
       }
       @media #{$nb1100}  {
@@ -212,7 +212,7 @@
       z-index: 5;
       display: block;
       @extend %inline_item;
-      @media #{$pc_s} {
+      @media #{$pc_m} {
         right: 45px;
         bottom: -77px;
       }
