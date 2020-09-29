@@ -829,6 +829,7 @@
         width: 100%;
         padding-left: 185px;
         font-size: 36px;
+        line-height: 40px;
         font-weight: bold;
         letter-spacing: 1px;
         color: #333333;
@@ -841,6 +842,7 @@
         @media #{$pad} {
           padding-left: 120px;
           font-size: 24px;
+          line-height: 30px;
         }
         @media #{$mobile} {
           font-size: 20px;
