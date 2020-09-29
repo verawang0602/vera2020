@@ -15,7 +15,7 @@
       }
       @media #{$pad} {
         height: auto;
-        min-height: 650px;
+        min-height: 610px;
       }
       div{
         line-height: 0;
@@ -35,6 +35,9 @@
         bottom: 0;
         left: 0;
         z-index: 1;
+        @media #{$mobile} {
+          width: 200%;
+        }
       }
       .grass_fence{
         width: 100%;
@@ -57,6 +60,9 @@
           left: auto;
           right: -60px;
         }
+        @media #{$mobile}{
+          display: none;
+        }
       }
       .tree_wde_r{
         width: 245px;
@@ -71,6 +77,9 @@
         @media #{$nb1100} {
           width: 240px;
           left: -60px;
+        }
+        @media #{$mobile}{
+          display: none;
         }
       }
       .cloud_l{
@@ -93,10 +102,10 @@
         font-weight: 500;
         color: #333333;
         text-align: center;
-        line-height: 50px;
+        line-height: 55px;
         letter-spacing: 2px;
-        @media #{$mobile} {
-          padding-top: 90px;
+        @media #{$pad} {
+          padding: 90px 15px 0;
           font-size: 30px;
           line-height: 40px;
         }
@@ -108,14 +117,25 @@
         z-index: 2;
         @media #{$pc_s} {
           padding-right: 600px;
-          margin-top: 230px;
+          margin-top: 90px;
         }
         @media #{$nb1100}  {
           padding: 0 15px;
-          margin-top: 60px;
+          margin-top: 30px;
         } 
         @media #{$nb500} {
           margin-top: 20px;
+        }
+        .respon{
+          display: block;
+          font-size: 20px;
+          font-weight: 500;
+          color: $col_blue;
+          margin-bottom: 10px;
+          @media #{$pad} {
+            font-size: 18px;
+            line-height: 22px;
+          }
         }
         p{
           font-size: 20px;
@@ -142,7 +162,7 @@
             line-height: 27px;
           }
           @media #{$mobile} {
-            padding: 30px;
+            padding: 20px;
           }
         }
       }
@@ -153,10 +173,11 @@
         @include background-size(contain);
         background-color: #F6F7F5;
         text-align: center;
+        padding-top: 20px;
       } 
       .view{
         @media #{$nb1100}  {
-          margin-top: -20%;
+          margin-top: -15%;
           position: relative;
           display: inline-block;
         } 
@@ -262,6 +283,12 @@
     background: url("#{$img_path}stone_wde.png") top center no-repeat;
     @include background-size(contain);
     background-color: $col_road;
+    @media #{$pad} {
+      padding: 90px 0 0;
+    }
+    @media #{$nb500} {
+      padding: 110px 0 0;
+    }
     .main{
       position: relative;
       &::before{
@@ -308,6 +335,7 @@
         font-weight: 400;
         letter-spacing: 1px;
         color: #333333;
+        text-align: justify;
         @media #{$mobile} {
           font-size: 18px;
           line-height: 32px;
@@ -530,6 +558,7 @@
           line-height: 32px;
           letter-spacing: 1px;
           color: #333333;
+          text-align: justify;
           @media #{$pad} {
             font-size: 18px;
             line-height: 32px;
