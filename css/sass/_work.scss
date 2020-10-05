@@ -263,7 +263,7 @@
         font-size: 30px;
         line-height: 32px;
         letter-spacing: 2px;
-        font-weight: bold;
+        font-weight: 500;
         color: $col_blue;
         vertical-align: bottom;
         padding-right: 30px;
@@ -1137,6 +1137,7 @@
       span{
         @extend %inline-block;
         font-size: 30px;
+        font-weight: 500;
         line-height: 36px;
         letter-spacing: 2px;
         color: #0372AC;
@@ -1225,6 +1226,7 @@
       p{
         text-align: center;
         font-size: 24px;
+        font-weight: 500;
         line-height: 30px;
         letter-spacing: 5px;
         color: #FFFFFF;
@@ -1888,6 +1890,7 @@
         @extend %inline-block;
         background: none;
         font-size: 30px;
+        font-weight: 500;
         color: #4B443D;
         line-height: 40px;
         letter-spacing: 2px;
